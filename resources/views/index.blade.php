@@ -50,11 +50,11 @@
             <h5>It has been observed that Humans:</h5>
         </div>
         <blockquote class="col-8 mx-auto center py2">
-            <span class="break-word">{{ $quote or 'No quotes' }}</span>
+            <span id="quote" class="break-word">{{ $quote or 'No quotes' }}</span>
         </blockquote>
     </div>
     <div class="col-2 mx-auto center">
-        <button class="btn btn-big rounded border-black black muted">More</button>
+        <button id="more" class="btn btn-outline btn-big rounded border-black black muted">More</button>
     </div>
     <div class="col-2 mx-auto center">
         <button class="btn btn-big rounded mt2 muted">all</button>
@@ -63,5 +63,55 @@
         <small class="">&copy; 2016</small>
         <small class="block py1"><a class="black muted text-decoration-none" href="//twitter.com/BillyWhizzkid">Will Murray</a> &mdash; fellow weird anthropomorphic being.</small>
     </footer>
+
+    <script>
+        var thing = document.getElementById('more')
+        var quote = document.getElementById('quote')
+
+        thing.onclick = function () {
+            getMore()
+        }
+
+
+        function setupXHR(oReq) {
+            oReq.open("GET", "/another");
+            oReq.send();
+        }
+
+        function getMore () {
+            var oReq = new XMLHttpRequest();
+            setupXHR(oReq)
+            oReq.addEventListener("progress", updateProgress);
+            oReq.addEventListener("load", transferComplete);
+            oReq.addEventListener("error", transferFailed);
+            oReq.addEventListener("abort", transferCanceled);
+
+            // progress on transfers from the server to the client (downloads)
+            function updateProgress (oEvent) {
+                if (oEvent.lengthComputable) {
+                    var percentComplete = oEvent.loaded / oEvent.total;
+                } else {
+                    // Unable to compute progress information since the total size is unknown
+                }
+            }
+
+            function transferComplete(evt) {
+                var data = evt.currentTarget.responseText;
+                if(quote.innerHTML === data) {
+                    setupXHR(oReq)
+                }
+                quote.innerHTML = data
+            }
+
+            function transferFailed(evt) {
+                console.log("An error occurred while transferring the file.");
+            }
+
+            function transferCanceled(evt) {
+                console.log("The transfer has been canceled by the user.");
+            }
+
+        }
+    </script>
 </body>
 </html>

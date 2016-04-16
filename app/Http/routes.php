@@ -11,6 +11,12 @@ $app->get('/', function () use ($app, $fileManager) {
     ]);
 });
 
+$app->get('/another', function () use ($app, $fileManager) {
+    $lines = $fileManager->getData();
+
+    return $lines->random();
+});
+
 $app->put('/{data}', function () use ($app, $fileManager) {
 
     return $fileManager->getData();
