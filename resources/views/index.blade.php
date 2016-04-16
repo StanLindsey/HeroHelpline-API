@@ -37,20 +37,23 @@
     <title>{{ $title or 'No title' }}</title>
 </head>
 <body>
-    <div class="black muted py4">
+    <div class="black muted py2">
         <div class="mx-auto center">
             <h6>On</h6>
             <h1 style="font-size: 3em">Human Beings</h1>
         </div>
         <div class="mx-auto center py1"> <!-- curious, peculiar, exhibit, embody, characterise -->
-            <h3>And the curious behaviours <br>that they exhibit</h3>
+            <h3>And the curious behaviours
+                <br>
+                they exhibit
+            </h3>
         </div>
         <hr class="col-1 border-black">
         <div class="mx-auto center py2"> <!-- curious, peculiar, exhibit, embody, characterise -->
-            <h5>It has been observed that Humans:</h5>
+            <h5>It has been observed that Humans</h5>
         </div>
         <blockquote class="col-8 mx-auto center py2">
-            <span id="quote" class="break-word">{{ $quote or 'No quotes' }}</span>
+            <span id="quote" class="break-word">{{ $quote or 'No quotes' }}.</span>
         </blockquote>
     </div>
     <div class="col-2 mx-auto center">
@@ -60,8 +63,11 @@
         <button class="btn btn-big rounded mt2 muted">all</button>
     </div>
     <footer class="col-2 mx-auto center muted my2">
-        <small class="">&copy; 2016</small>
-        <small class="block py1"><a class="black muted text-decoration-none" href="//twitter.com/BillyWhizzkid">Will Murray</a> &mdash; fellow weird anthropomorphic being.</small>
+        <small class="block">
+            &copy; 2016
+            <a class="black muted text-decoration-none" href="//twitter.com/BillyWhizzkid" target="_blank"> Will Murray </a>
+        </small>
+        <small class="block h6 py3">(fellow weird anthropomorphic being)</small>
     </footer>
 
     <script>
