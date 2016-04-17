@@ -6,8 +6,9 @@ $app->get('/', function () use ($app, $fileManager) {
     $lines = $fileManager->getData();
 
     return view('index')->with([
-        'title' => "&#127788;",
-        'quote' => $lines->random(),
+        'title'   => "&#127788;",
+        'quote'   => $lines->random(),
+        'updated' => $fileManager->getLastUpdated(),
     ]);
 });
 
@@ -54,10 +55,14 @@ class FileManager {
 
         return $lines;
     }
+
     public function getLastUpdated() {
-        return \Carbon\Carbon::parse(filectime($this->dataFile));
+
+        return \Carbon\Carbon::createFromTimestamp(filectime($this->dataFile))->diffForHumans();
     }
+
     public function getLastAccessed() {
+
         return \Carbon\Carbon::parse(fileatime($this->dataFile));
     }
 }
