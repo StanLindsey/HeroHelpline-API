@@ -93,7 +93,6 @@
             </svg>
         </a>
         <small class="block h6 my1" style="opacity: .2">updated {{ $updated }}</small>
-        <small class="block h6 my1" style="opacity: .1">Disclaimer: information provided may or may not be true. Don't do any of the stupid shit mentioned in this website, or you may suffer permanent injury or death.</small>
     </footer>
 
     <script>
