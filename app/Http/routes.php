@@ -48,7 +48,7 @@ class FileManager {
         $lines = collect();
 
         foreach(file($this->dataFile, FILE_IGNORE_NEW_LINES) as $line) {
-            if(!empty(trim($line))) {
+            if(!empty(trim($line) && !starts_with($line, '#'))) {
                 $lines->push($line);
             }
         }
