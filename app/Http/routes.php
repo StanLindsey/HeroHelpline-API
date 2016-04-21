@@ -2,20 +2,24 @@
 
 $fileManager = new FileManager();
 
-$verbs = collect(['Behaviours', 'Characteristics', 'Things', 'Traits', 'Manners', 'Demeanors', 'Attitudes']);
-$exhibit = collect(['Exhibit', 'Display', 'Portray', 'Embody', 'Possess']);
-$curious = collect(['Curious', 'Bizarre', 'Strange', 'Warped', 'Odd', 'Peculiar']);
+$adjectives  = collect(['Behaviours', 'Characteristics', 'Things', 'Traits', 'Manners', 'Dynamics', 'Tendencies', 'Natures']);
+$exhibit    = collect(['Exhibit', 'Display', 'Portray', 'Embody', 'Possess', 'Express', 'Project', 'Showcase', 'Characterise']);
+$curious    = collect(['Curious', 'Bizarre', 'Strange', 'Warped', 'Odd', 'Peculiar']);
+$comprehend = collect(['Comprehended', 'Predicted', 'Understood', 'Acknowledged', 'Groked', 'Apprehended', 'Discerned', 'Deciphered', 'Conceived', 'Registered', 'Perceived', 'Made out', 'Thought']);
+$on         = collect(['On', 'Pertaining to', 'Regarding', 'On the study of', 'Observations on']);
 
-$app->get('/', function () use ($app, $fileManager, $verbs, $exhibit, $curious) {
+$app->get('/', function () use ($app, $fileManager, $adjectives, $exhibit, $curious, $comprehend, $on) {
     $lines = $fileManager->getData();
 
     return view('index')->with([
-        'title'   => "&#127788;",
-        'quote'   => $lines->random(),
-        'verb'    => $verbs->random(),
-        'exhibit' => $exhibit->random(),
-        'curious' => $curious->random(),
-        'updated' => $fileManager->getLastUpdated(),
+        'title'      => "&#127788;",
+        'quote'      => $lines->random(),
+        'adjective'  => $adjectives->random(),
+        'exhibit'    => $exhibit->random(),
+        'curious'    => $curious->random(),
+        'comprehend' => $comprehend->random(),
+        'on'         => $on->random(),
+        'updated'    => $fileManager->getLastUpdated(),
     ]);
 });
 

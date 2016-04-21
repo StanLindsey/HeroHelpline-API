@@ -48,21 +48,21 @@
 <body>
     <div class="black muted py2">
         <div class="mx-auto center">
-            <h6>On</h6>
+            <h6>{{ $on or 'On' }}</h6>
             <h1 style="font-size: 3em">Human Beings</h1>
         </div>
         <div class="mx-auto center py1"> <!-- curious, peculiar, exhibit, embody, characterise -->
             <h3>
-                And the {{ $curious or 'No curious' }} {{ $verb or 'No verbs' }}
+                And the {{ $curious or 'No curious' }} {{ $adjective or 'No adjective' }}
                 <br>
-                they {{ $exhibit or 'No exhibits' }}
+                they {{ $exhibit or 'No exhibit' }}
             </h3>
         </div>
 
         <hr class="col-1 border-black">
 
         <div class="mx-auto center py2">
-            <h5>It has been observed that Humans</h5>
+            <h5>It has been {{ $comprehend or 'No comprehend' }} that Humans</h5>
         </div>
 
         <blockquote class="animated pulse col-8 mx-auto center py2">
@@ -93,6 +93,9 @@
             </svg>
         </a>
         <small class="block h6 my1" style="opacity: .2">updated {{ $updated }}</small>
+        <small class="block h6 my1" style="opacity: .1">May contain unfacts/untruths/plain bullshit</small>
+
+
     </footer>
 
     <script>
