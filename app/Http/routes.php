@@ -2,7 +2,7 @@
 
 $fileManager = new FileManager();
 
-$adjectives  = collect(['Behaviours', 'Characteristics', 'Things', 'Traits', 'Manners', 'Dynamics', 'Tendencies', 'Natures']);
+$adjectives = collect(['Behaviours', 'Characteristics', 'Things', 'Traits', 'Manners', 'Dynamics', 'Tendencies', 'Natures']);
 $exhibit    = collect(['Exhibit', 'Display', 'Portray', 'Embody', 'Possess', 'Express', 'Project', 'Showcase', 'Characterise']);
 $curious    = collect(['Curious', 'Bizarre', 'Strange', 'Warped', 'Odd', 'Peculiar']);
 $comprehend = collect(['Comprehended', 'Predicted', 'Understood', 'Acknowledged', 'Groked', 'Apprehended', 'Discerned', 'Deciphered', 'Conceived', 'Registered', 'Perceived', 'Made out', 'Thought']);
