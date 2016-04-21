@@ -53,9 +53,9 @@
         </div>
         <div class="mx-auto center py1"> <!-- curious, peculiar, exhibit, embody, characterise -->
             <h3>
-                And the curious behaviours
+                And the {{ $curious or 'No curious' }} {{ $verb or 'No verbs' }}
                 <br>
-                they exhibit
+                they {{ $exhibit or 'No exhibits' }}
             </h3>
         </div>
 
@@ -200,7 +200,7 @@
         function addQuote (el, quote, i) {
             window.setTimeout(function () {
                 el.innerHTML += '<blockquote class="">' + '<span class="">' + quote + '.' + '</span>' + '</blockquote>';
-            }, 150*i)
+            }, 50)
         }
 
     </script>
