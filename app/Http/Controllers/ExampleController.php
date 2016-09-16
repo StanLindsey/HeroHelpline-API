@@ -24,6 +24,8 @@ class ExampleController extends Controller
         // Get our heroes
         $heroes = $this->chooseHeroes();
 
+        $heroes = $heroes->shuffle();
+
         // Pick heroes for each role
         $proposal1 = $heroes->pop();
         $proposal2 = $heroes->pop();
