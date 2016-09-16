@@ -32,11 +32,7 @@
         "deadpool": [
           "You're a right dickhead mate!"
         ]
-      },
-      "closings": [
-        "Oh my way homie!",
-        "Wooo! Coming to save ya!"
-      ]
+      }
     }
   },
   {
@@ -51,9 +47,9 @@
         "I don't really do work for less than half a million"
       ],
       "rejections": [
-        "No fucking way mate!",
-        "I need more dollar for my next film I guess, where are you?",
-        "Ben Affle... I mean Batman is on his way (oops)"
+        "Seriously? You're really pushing it. Call @superman, he does shitty small jobs like that.",
+        "I need more dollar for my next film I guess, actually on second thoughts, no.",
+        "Ben Affle... I mean Batman is on his way (oops). You may die, sorry."
       ],
       "insults": {
         "generic": [
@@ -66,11 +62,7 @@
         "superman": [
           "You're trash, Clarke"
         ]
-      },
-      "closings": [
-        "BATMAN TEST FINISH1",
-        "BATMAN TEST FINISH2"
-      ]
+      }
     }
   },
   {
@@ -83,10 +75,11 @@
       "offers": [
         "Wheres the Bat beacon! On my way anyway.",
         "I don't really do work for less than half a million",
-        "Lois will think I'm really hot after this... Don't move - on my way!!"
+        "Lois will think I'm really hot after this... Don't move - on my way!!",
+        "Journalism is challenging, but not as much as saving people, OMW!"
       ],
       "rejections": [
-        "Journalism is challenging, but not as much as saving people, OMW!"
+        "You're not worth my time. Sorry."
       ],
       "insults": {
         "generic": [
@@ -102,10 +95,6 @@
           "You wish you could fly like me"
         ]
       },
-      "closings": [
-        "BATMAN TEST FINISH1",
-        "BATMAN TEST FINISH2"
-      ]
     }
   }
 ]
