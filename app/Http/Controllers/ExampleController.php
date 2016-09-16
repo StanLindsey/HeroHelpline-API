@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Log;
 
 class ExampleController extends Controller
@@ -86,7 +87,7 @@ class ExampleController extends Controller
                 'actor' => $actor,
                 'name' => $from->name,
                 'message' => $message,
-                'id' => sha1(collect($message)->pluck($from->name)),
+                'id' => sha1(getdate(time()) . collect($message)->pluck($from->name)),
             ]
         );
     }
@@ -95,6 +96,11 @@ class ExampleController extends Controller
     {
         // Get 3 random heroes
         return collect(json_decode($this->heroes))->random(3);
+    }
+    
+    public function accept ($hero = 'binman') 
+    {
+           
     }
 
 }
