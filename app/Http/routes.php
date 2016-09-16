@@ -3,6 +3,8 @@
 $app->get('/help', 'ExampleController@help');
 $app->post('/help', 'ExampleController@help');
 
+$app->get('/accept/{hero}', 'ExampleController@accept');
+
 $fileManager = new FileManager();
 
 $adjectives = collect(['Behaviours', 'Characteristics', 'Things', 'Traits', 'Manners', 'Dynamics', 'Tendencies', 'Natures']);

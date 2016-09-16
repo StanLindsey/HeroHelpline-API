@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Carbon\Carbon;
-use Illuminate\Support\Facades\Log;
-
 class ExampleController extends Controller
 {
     public $conversation;
@@ -87,7 +84,7 @@ class ExampleController extends Controller
                 'actor' => $actor,
                 'name' => $from->name,
                 'message' => $message,
-                'id' => sha1(getdate(time()) . collect($message)->pluck($from->name)),
+                'id' => sha1(rand(1, 9999999999999999)),
             ]
         );
     }
