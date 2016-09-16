@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Log;
+
 class ExampleController extends Controller
 {
     public $conversation;
@@ -14,7 +16,7 @@ class ExampleController extends Controller
         $this->conversation = collect();
         $this->heroes   = file_get_contents(storage_path('/data/heroes.json'));
         $this->messages = file_get_contents(storage_path('/data/messages.json'));
-        $this->insults  = file_get_contents(storage_path('/data/insults.json'));
+        $this->insults  = collect(file_get_contents(storage_path('/data/insults.json')));
     }
 
     public function help ()
@@ -28,14 +30,27 @@ class ExampleController extends Controller
         $decliner  = $heroes->pop();
 
         // Build a conversation
-        $this->addMessageToConversation($proposal1, collect($proposal1->responses->offers)->random());
-        $this->addMessageToConversation($decliner,  collect($decliner->responses->rejections)->random());
-        $this->addMessageToConversation($proposal2, collect($proposal2->responses->offers)->random());
-        // Insult
-        $this->addMessageToConversation($proposal2, collect($proposal2->responses->insults)->pluck($proposal2->name));
+
+        // Initial proposal
+        $this->addMessageToConversation('proposal1', $proposal1, collect($proposal1->responses->offers)->random());
+
+        // Decline the offer
+        $this->addMessageToConversation('decliner', $decliner,  collect($decliner->responses->rejections)->random());
+
+        // Does the proposal2 have a specific insult for proposal1?
+        if(count(collect($proposal2->responses->insults)->get($proposal1->name))) {
+            // Yes
+            $this->addMessageToConversation('proposal2', $proposal2, collect($proposal2->responses->insults)->get($proposal1->name, $this->insults->random()));
+        } else {
+            // No
+            $this->addMessageToConversation('proposal2', $proposal2, collect($proposal2->responses->insults)->random());
+        }
+
+        // Second offer
+        $this->addMessageToConversation('proposal2', $proposal2, collect($proposal2->responses->offers)->random());
 
         // Return that shit!
-        return json_encode($this->conversation);
+        return response($this->conversation);
 
         // opening - I'll do it
         // insults - your mother...
@@ -47,10 +62,11 @@ class ExampleController extends Controller
         
     }
 
-    public function addMessageToConversation ($hero, $message)
+    public function addMessageToConversation ($actor, $hero, $message)
     {
         $this->conversation->push(
             [
+                'actor' => $actor,
                 'name' => $hero->name,
                 'message' => collect($message),
                 'id' => sha1(collect($message)->pluck($hero->name)),

@@ -21,6 +21,9 @@
         ],
         "batman": [
           "Both your parents are dead, but at least I'm not a douche!"
+        ],
+        "deadpool": [
+          "You're a right dickhead mate!"
         ]
       },
       "closings": [
@@ -76,11 +79,16 @@
       ],
       "insults": {
         "generic": [
-          "You're so poor you really need the work",
-          "I may not have any superpowers, but yours are shit."
+          "Go drink bin juice, twat."
         ],
         "deadpool": [
-          "Why don't you get your uncle to make you some rich TROLOLOLO"
+          "They'll find you dead in the alleyway, with cats lickin' at ya!"
+        ],
+        "batman": [
+          "You smell like the dump"
+        ],
+        "superman": [
+          "You're trash"
         ]
       },
       "closings": [
@@ -97,20 +105,17 @@
     },
     "responses": {
       "offers": [
-        "Wheres the Bat beacon! On my way anyway.",
-        "I don't really do work for less than half a million"
+        "Deadpooloffer"
       ],
       "rejections": [
-        "No fucking way mate!",
-        "For that much? no way!"
+        "I'll smash your face in"
       ],
       "insults": {
         "generic": [
-          "You're so poor you really need the work",
-          "I may not have any superpowers, but yours are shit."
+          "You're a butthole"
         ],
-        "binman": [
-          "Why don't you get your uncle to make you some rich TROLOLOLO"
+        "superman": [
+          "Your cape is shit"
         ]
       },
       "closings": [
