@@ -10,6 +10,7 @@ class ExampleController extends Controller
     public $messages;
     public $insults;
     public $heroes;
+    public $usedInsults;
 
     public function __construct()
     {
@@ -37,15 +38,15 @@ class ExampleController extends Controller
         // Decline the offer
         $this->addMessageToConversation('decliner', $decliner,  collect($decliner->responses->rejections)->random());
 
-        // Does the proposal2 have a specific insult for proposal1?
-        if(count(collect($proposal2->responses->insults)->get($proposal1->name))) {
-            // Yes
-            $this->addMessageToConversation('proposal2', $proposal2, collect($proposal2->responses->insults)->get($proposal1->name, $this->insults->random()));
-        } else {
-            // No
-            $this->addMessageToConversation('proposal2', $proposal2, collect($proposal2->responses->insults)->random());
-        }
+        $numOfInsults = rand(1,5);
 
+        for ($x=0; $x <= $numOfInsults; $x++)
+        {
+            // Trade insults
+            $this->insult('proposal2', $proposal2, $proposal1);
+            $this->insult('proposal1', $proposal1, $proposal2);
+        }          
+        
         // Second offer
         $this->addMessageToConversation('proposal2', $proposal2, collect($proposal2->responses->offers)->random());
 
@@ -57,19 +58,35 @@ class ExampleController extends Controller
         // exit - see you in {{time}}
     }
 
-    public function getInsults ()
+    public function insult ($actor, $from, $to)
     {
+        $insults = collect($from->responses->insults); 
+                
+        if(count($insults->get($to->name))) {
+            // Yes
+            $insult = $insults->get($to->name, $this->insults->random());            
+        } else {
+            // No
+            $insult = $insults->random();            
+        }
         
+        //$this->usedInsults->push($insult);
+        $this->addMessageToConversation($actor, $from, $insult, $to);
     }
 
-    public function addMessageToConversation ($actor, $hero, $message)
+    public function addMessageToConversation ($actor, $from, $message, $to = "")
     {
+        if ($to)
+        {
+            $message = "@" . $to->name . " " . collect($message)->first();
+        }
+        
         $this->conversation->push(
             [
                 'actor' => $actor,
-                'name' => $hero->name,
-                'message' => collect($message),
-                'id' => sha1(collect($message)->pluck($hero->name)),
+                'name' => $from->name,
+                'message' => $message,
+                'id' => sha1(collect($message)->pluck($from->name)),
             ]
         );
     }
