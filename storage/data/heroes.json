@@ -1,6 +1,6 @@
 [
   {
-    "name": "spiderman",
+    "name": "spidermanpub",
     "stats": {
       "personality": "cocky",
       "richness": "poor"
@@ -33,7 +33,7 @@
     }
   },
   {
-    "name": "batman",
+    "name": "batmanpub",
     "stats": {
       "personality": "badass",
       "richness": "massive"
@@ -63,7 +63,7 @@
     }
   },
   {
-    "name": "binman",
+    "name": "binmanpub",
     "stats": {
       "personality": "rough and tough",
       "richness": "broke as shit"
@@ -98,7 +98,7 @@
     }
   },
   {
-    "name": "deadpool",
+    "name": "deadpoolpub",
     "stats": {
       "personality": "dunno",
       "richness": "well off"

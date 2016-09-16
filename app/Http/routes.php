@@ -1,6 +1,9 @@
 <?php
 
 $app->get('/help', 'ExampleController@help');
+$app->post('/help', 'ExampleController@help');
+
+$app->get('/accept/{hero}', 'ExampleController@accept');
 
 $fileManager = new FileManager();
 

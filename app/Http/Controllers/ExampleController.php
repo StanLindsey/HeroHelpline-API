@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Log;
-
 class ExampleController extends Controller
 {
     public $conversation;
@@ -95,7 +93,7 @@ class ExampleController extends Controller
                 'actor' => $actor,
                 'name' => $from->name,
                 'message' => $message,
-                'id' => sha1(collect($message)->pluck($from->name)),
+                'id' => sha1(rand(1, 9999999999999999)),
             ]
         );
     }
@@ -104,6 +102,11 @@ class ExampleController extends Controller
     {
         // Get 3 random heroes
         return collect(json_decode($this->heroes))->random(3);
+    }
+    
+    public function accept ($hero = 'binman') 
+    {
+           
     }
 
 }
