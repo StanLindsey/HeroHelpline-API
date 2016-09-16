@@ -1,0 +1,106 @@
+[
+  {
+    "name": "spiderman",
+    "stats": {
+      "personality": "cocky",
+      "richness": "poor"
+    },
+    "responses": {
+      "offers": [
+        "I'll sling my way over there now!",
+        "By the power of Uncle Ben I shall help you!"
+      ],
+      "insults": {
+        "generic": [
+          "I'll cover you in sweet web you idiot!",
+          "Wow, you're old."
+        ],
+        "to-batman": [
+          "Both your parents are dead, but at least I'm not a douche!"
+        ]
+      },
+      "closings": [
+        "Oh my way homie!",
+        "Wooo! Coming to save ya!"
+      ]
+    }
+  },
+  {
+    "name": "batman",
+    "stats": {
+      "personality": "badass",
+      "richness": "massive"
+    },
+    "responses": {
+      "offers": [
+        "Wheres the Bat beacon! On my way anyway.",
+        "I don't really do work for less than half a million"
+      ],
+      "insults": {
+        "generic": [
+          "You're so poor you really need the work",
+          "I may not have any superpowers, but yours are shit."
+        ],
+        "to-spiderman": [
+          "Why don't you get your uncle to make you some rich TROLOLOLO"
+        ]
+      },
+      "closings": [
+        "BATMAN TEST FINISH1",
+        "BATMAN TEST FINISH2"
+      ]
+    }
+  },
+  {
+    "name": "bin-man",
+    "stats": {
+      "personality": "rough and tough",
+      "richness": "broke as shit"
+    },
+    "responses": {
+      "offers": [
+        "Wheres the Bat beacon! On my way anyway.",
+        "I don't really do work for less than half a million"
+      ],
+      "insults": {
+        "generic": [
+          "You're so poor you really need the work",
+          "I may not have any superpowers, but yours are shit."
+        ],
+        "to-spiderman": [
+          "Why don't you get your uncle to make you some rich TROLOLOLO"
+        ]
+      },
+      "closings": [
+        "BATMAN TEST FINISH1",
+        "BATMAN TEST FINISH2"
+      ]
+    }
+  },
+  {
+    "name": "Deadpool",
+    "stats": {
+      "personality": "rough and tough",
+      "richness": "broke as shit"
+    },
+    "responses": {
+      "offers": [
+        "Wheres the Bat beacon! On my way anyway.",
+        "I don't really do work for less than half a million"
+      ],
+      "insults": {
+        "generic": [
+          "You're so poor you really need the work",
+          "I may not have any superpowers, but yours are shit."
+        ],
+        "to-spiderman": [
+          "Why don't you get your uncle to make you some rich TROLOLOLO"
+        ]
+      },
+      "closings": [
+        "BATMAN TEST FINISH1",
+        "BATMAN TEST FINISH2"
+      ]
+    }
+  }
+]

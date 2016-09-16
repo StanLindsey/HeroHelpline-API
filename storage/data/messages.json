@@ -1,0 +1,25 @@
+{
+  "generic-responses": {
+    "offers": [
+      "I'll can there in {{TIME}}mins! But only for a juicy pizza!",
+      "I only really bother to show up if there are broken limbs.. but I guess I can",
+      "Sure thang sweet cheeks. I'll save your ass. Gotta fly to Aldi first.",
+      "You don't deserve to be saved. But pay my rent and I may show up.",
+      "{{MONEH}} all in?"
+    ],
+    "insults": [
+      "Pfft, you can barely fight your way out of a paper bag!",
+      "Aren't you hungover from last night, you alcoholic?",
+      "No way are you attempting to help out! Your parents are dead!",
+      "Ahahahahaha... you Tosser. Get out of here you lame excuse for a 'hero'",
+      "Oh lord, you're such a muppet."
+    ],
+    "closings": [
+      "I'm basically already there so I'll just head over. #whatever",
+      "Save the cheerleader save the world, so I guess I'm on my way!",
+      "TAXI!",
+      "Oh my way babycakes!",
+      "Roger that! Super Hero Powers Charging!"
+    ]
+  }
+}
