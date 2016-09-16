@@ -8,19 +8,26 @@
     "responses": {
       "offers": [
         "I'll sling my way over there now!",
-        "By the power of Uncle Ben I shall help you!"
+        "You're a bit far away, I guess I could help...",
+        "By the power of Uncle Ben I shall help you!",
+        "My spidey sense is tingling, in all the right places. How can I help?"
       ],
       "rejections": [
         "No fucking way mate!",
-        "For that much? no way!"
+        "You're having a bubble",
+        "You can't be serious..."
       ],
       "insults": {
         "generic": [
           "I'll cover you in sweet web you idiot!",
-          "Wow, you're old."
+          "Lick my spinneret 😂",
+          "Wow, you're old.",
+          "You're just a fly to me"
         ],
         "batman": [
-          "Both your parents are dead, but at least I'm not a douche!"
+          "Both your parents are dead, but at least I'm not a douche!",
+          "Hey bat-douche, how's life living with an old man?",
+          "Wow bruce mate... you surprise me every time with your stupidity.😂"
         ],
         "deadpool": [
           "You're a right dickhead mate!"
@@ -45,7 +52,8 @@
       ],
       "rejections": [
         "No fucking way mate!",
-        "For that much? no way!"
+        "I need more dollar for my next film I guess, where are you?",
+        "Ben Affle... I mean Batman is on his way (oops)"
       ],
       "insults": {
         "generic": [
@@ -53,7 +61,10 @@
           "I may not have any superpowers, but yours are shit."
         ],
         "spiderman": [
-          "Why don't you get your uncle to make you some rich TROLOLOLO"
+          "Why don't you get your uncle to make you some rich TROLOLOLO 😂👍🏿"
+        ],
+        "superman": [
+          "You're trash, Clarke"
         ]
       },
       "closings": [
@@ -71,24 +82,24 @@
     "responses": {
       "offers": [
         "Wheres the Bat beacon! On my way anyway.",
-        "I don't really do work for less than half a million"
+        "I don't really do work for less than half a million",
+        "Lois will think I'm really hot after this... Don't move - on my way!!"
       ],
       "rejections": [
-        "No fucking way mate!",
-        "For that much? no way!"
+        "Journalism is challenging, but not as much as saving people, OMW!",
       ],
       "insults": {
         "generic": [
-          "Go drink bin juice, twat."
+          "I beat Lex Luthor mate, come at me bro!",
+          "Kryptonite ain't shit"
         ],
         "deadpool": [
-          "They'll find you dead in the alleyway, with cats lickin' at ya!"
+          "They'll find you dead in the alleyway, with cats lickin' at ya!",
+          "Try being me for a day, betcha can't handle it"
         ],
         "batman": [
-          "You smell like the dump"
-        ],
-        "superman": [
-          "You're trash"
+          "You smell like the city dump",
+          "You wish you could fly like me"
         ]
       },
       "closings": [
