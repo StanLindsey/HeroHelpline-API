@@ -63,10 +63,10 @@
     }
   },
   {
-    "name": "binmanpub",
+    "name": "supermanpub",
     "stats": {
-      "personality": "rough and tough",
-      "richness": "broke as shit"
+      "personality": "nerdy journalist",
+      "richness": "minimum wage"
     },
     "responses": {
       "offers": [
@@ -89,33 +89,6 @@
         ],
         "superman": [
           "You're trash"
-        ]
-      },
-      "closings": [
-        "BATMAN TEST FINISH1",
-        "BATMAN TEST FINISH2"
-      ]
-    }
-  },
-  {
-    "name": "deadpoolpub",
-    "stats": {
-      "personality": "dunno",
-      "richness": "well off"
-    },
-    "responses": {
-      "offers": [
-        "Deadpooloffer"
-      ],
-      "rejections": [
-        "I'll smash your face in"
-      ],
-      "insults": {
-        "generic": [
-          "You're a butthole"
-        ],
-        "superman": [
-          "Your cape is shit"
         ]
       },
       "closings": [
