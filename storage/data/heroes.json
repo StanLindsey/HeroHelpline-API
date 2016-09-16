@@ -10,12 +10,16 @@
         "I'll sling my way over there now!",
         "By the power of Uncle Ben I shall help you!"
       ],
+      "rejections": [
+        "No fucking way mate!",
+        "For that much? no way!"
+      ],
       "insults": {
         "generic": [
           "I'll cover you in sweet web you idiot!",
           "Wow, you're old."
         ],
-        "to-batman": [
+        "batman": [
           "Both your parents are dead, but at least I'm not a douche!"
         ]
       },
@@ -36,12 +40,16 @@
         "Wheres the Bat beacon! On my way anyway.",
         "I don't really do work for less than half a million"
       ],
+      "rejections": [
+        "No fucking way mate!",
+        "For that much? no way!"
+      ],
       "insults": {
         "generic": [
           "You're so poor you really need the work",
           "I may not have any superpowers, but yours are shit."
         ],
-        "to-spiderman": [
+        "spiderman": [
           "Why don't you get your uncle to make you some rich TROLOLOLO"
         ]
       },
@@ -52,7 +60,7 @@
     }
   },
   {
-    "name": "bin-man",
+    "name": "binman",
     "stats": {
       "personality": "rough and tough",
       "richness": "broke as shit"
@@ -62,12 +70,16 @@
         "Wheres the Bat beacon! On my way anyway.",
         "I don't really do work for less than half a million"
       ],
+      "rejections": [
+        "No fucking way mate!",
+        "For that much? no way!"
+      ],
       "insults": {
         "generic": [
           "You're so poor you really need the work",
           "I may not have any superpowers, but yours are shit."
         ],
-        "to-spiderman": [
+        "deadpool": [
           "Why don't you get your uncle to make you some rich TROLOLOLO"
         ]
       },
@@ -78,22 +90,26 @@
     }
   },
   {
-    "name": "Deadpool",
+    "name": "deadpool",
     "stats": {
-      "personality": "rough and tough",
-      "richness": "broke as shit"
+      "personality": "dunno",
+      "richness": "well off"
     },
     "responses": {
       "offers": [
         "Wheres the Bat beacon! On my way anyway.",
         "I don't really do work for less than half a million"
       ],
+      "rejections": [
+        "No fucking way mate!",
+        "For that much? no way!"
+      ],
       "insults": {
         "generic": [
           "You're so poor you really need the work",
           "I may not have any superpowers, but yours are shit."
         ],
-        "to-spiderman": [
+        "binman": [
           "Why don't you get your uncle to make you some rich TROLOLOLO"
         ]
       },

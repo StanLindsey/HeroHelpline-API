@@ -17,22 +17,59 @@ class ExampleController extends Controller
 
     public function help ()
     {
-        return $this->chooseHeroes();
-    }
+        $conversation = collect();
 
-    public function chooseHeroes ()
-    {
-        $heroes = collect(json_decode($this->heroes));
-        $heroes = json_encode($heroes->random(3));
+        // Get our heroes
+        $heroes = $this->chooseHeroes();
 
-        
+        $proposal1 = $heroes->pop();
+        $proposal2 = $heroes->pop();
+        $decliner  = $heroes->pop();
 
-        return $heroes;
+        $conversation->push(
+            [
+                'name' => $proposal1->name,
+                'message' => collect($proposal1->responses->offers)->random(),
+            ]
+        );
 
-        // 3 heroes
+        $conversation->push(
+            [
+                'name' => $decliner->name,
+                'message' => collect($decliner->responses->rejections)->random(),
+            ]
+        );
+
+        $conversation->push(
+            [
+                'name' => $proposal2->name,
+                'message' => collect($proposal2->responses->offers)->random(),
+            ]
+        );
+
+        $conversation->push(
+            [
+                'name' => $proposal2->name,
+                'message' => collect($proposal2->responses->insults)->pluck($proposal2->name),
+            ]
+        );
+
+        return json_encode($conversation);
+
         // opening - I'll do it
         // insults - your mother...
         // exit - see you in {{time}}
+    }
+
+    public function getInsults () {
+        
+    }
+    
+    public function chooseHeroes ()
+    {
+        // Get 3 random heroes
+        $heroes = collect(json_decode($this->heroes));
+        return $heroes->random(3);
     }
 
 }
