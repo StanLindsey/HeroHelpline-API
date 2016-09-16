@@ -15,7 +15,8 @@ class ExampleController extends Controller
         $this->conversation = collect();
         $this->heroes   = file_get_contents(storage_path('/data/heroes.json'));
         $this->messages = file_get_contents(storage_path('/data/messages.json'));
-        $this->insults  = collect(file_get_contents(storage_path('/data/insults.json')));
+        $this->insults  = json_decode(file_get_contents(storage_path('/data/insults.json')));
+        $this->usedInsults = collect();
     }
 
     public function help ()
@@ -58,17 +59,25 @@ class ExampleController extends Controller
 
     public function insult ($actor, $from, $to)
     {
-        $insults = collect($from->responses->insults); 
+        $insults = collect($from->responses->insults);
+        $genericInsults = collect($this->insults)->diff($this->usedInsults); 
+        $genericInsultsFromUser = collect($insults->get("generic"))->diff($this->usedInsults);
+        $tailoredInsults = collect($insults->get($to->name))->diff($this->usedInsults);  
                 
-        if(count($insults->get($to->name))) {
-            // Yes
-            $insult = $insults->get($to->name, $this->insults->random());            
-        } else {
-            // No
-            $insult = $insults->random();            
+        $insult = null;
+        
+        if(count($tailoredInsults)) {            
+            $insult = $tailoredInsults->random();            
+        } elseif (count($genericInsultsFromUser)) {            
+            $insult = $genericInsultsFromUser->random();            
+        }
+        elseif (count($genericInsults)) {
+            $insult = $genericInsults->random();
         }
         
-        //$this->usedInsults->push($insult);
+        if (!$insult) { return; }       
+
+        $this->usedInsults->push($insult);
         $this->addMessageToConversation($actor, $from, $insult, $to);
     }
 
