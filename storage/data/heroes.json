@@ -43,8 +43,10 @@
     },
     "responses": {
       "offers": [
-        "Wheres the Bat beacon! On my way anyway.",
-        "I don't really do work for less than half a million"
+        "Wheres the Bat beacon?! On my way anyway.",
+        "I don't really do work for less than half a million",
+        "Alfred, sort get ready to rock 'n roll",
+        "My parents might be dead, but my spirit is strong!"
       ],
       "rejections": [
         "Seriously? You're really pushing it. Call @superman, he does shitty small jobs like that.",
@@ -54,7 +56,8 @@
       "insults": {
         "generic": [
           "You're so poor you really need the work",
-          "I may not have any superpowers, but yours are shit."
+          "I may not have any superpowers, but yours are shit. Do one.",
+          "My batarang will end you, idiot."
         ],
         "spiderman": [
           "Why don't you get your uncle to make you some rich TROLOLOLO 😂👍🏿"
@@ -76,7 +79,7 @@
         "Wheres the Bat beacon! On my way anyway.",
         "I don't really do work for less than half a million",
         "Lois will think I'm really hot after this... Don't move - on my way!!",
-        "Journalism is challenging, but not as much as saving people, OMW!"
+        "Journalism is challenging, but not as much as saving people from contrived and unrealistic situations - OMW!"
       ],
       "rejections": [
         "You're not worth my time. Sorry."
